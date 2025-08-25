@@ -20,12 +20,17 @@
 
 Build docker image
 ```bash
-docker build -t receipt_app .
+docker build -t ariefpa/receipt_app .
+```
+
+Or pull from docker hub
+```bash
+docker pull ariefpa/receipt_app
 ```
 
 Run app
 ```bash
-docker run --rm -p 8000:8000 -p 11434:11434 -p 8501:8501 --gpus all -v {local/ollama/dir}:/root/.ollama --env-file {env_filename} receipt_app
+docker run --rm -p 8000:8000 -p 11434:11434 -p 8501:8501 --gpus all -v {local/ollama/dir}:/root/.ollama --env-file {env_filename} ariefpa/receipt_app
 ```
 Flags explanation
 - `-p` for 3 (three) forwarded ports
